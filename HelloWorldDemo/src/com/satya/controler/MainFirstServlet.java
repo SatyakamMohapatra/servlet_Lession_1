@@ -1,6 +1,9 @@
-package com.satya.controler;
+ package com.satya.controler;
 
 import java.io.IOException;
+import java.io.PrintStream;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,8 +21,13 @@ public class MainFirstServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		System.out.println("In the MainFirstServlet doPost Method");
+
+		System.out.println("[MainFirstServlet]..[doPost]..[Getting Request Setting Responce].."
+				+ ""+"[Thread name-]-"+Thread.currentThread().getName());
+		PrintWriter stream = response.getWriter();
+		stream.write("ram");
+		stream.write("satya");
+		
 	}
 
 }
