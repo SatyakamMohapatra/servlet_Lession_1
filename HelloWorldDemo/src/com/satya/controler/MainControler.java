@@ -8,39 +8,20 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-public class MainControler implements Servlet {
+import com.sun.net.httpserver.HttpsServer;
 
-	@Override
-	public void destroy() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public ServletConfig getServletConfig() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+public class MainControler extends HttpServlet {
 
 	@Override
-	public String getServletInfo() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void init(ServletConfig arg0) throws ServletException {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
-		String s = request.getParameter("name");
-		PrintWriter writer = response.getWriter();
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String s = req.getParameter("name");
+		PrintWriter writer = resp.getWriter();
 		writer.println("Hello.."+s);
-		//System.out.println(s+" "+writer);
+		System.out.println(s+" "+writer);
 	}
 
 }
