@@ -22,6 +22,8 @@ public class MainControler extends HttpServlet {
 		PrintWriter writer = resp.getWriter();
 		writer.println("Hello.."+s);
 		System.out.println(s+" "+writer);
+		
+		
 	}
 
 }
