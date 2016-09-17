@@ -1,7 +1,6 @@
  package com.satya.controler;
 
 import java.io.IOException;
-import java.io.PrintStream;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
