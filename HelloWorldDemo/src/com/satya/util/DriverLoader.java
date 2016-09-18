@@ -18,6 +18,7 @@ public class DriverLoader {
 			System.out.println("------------driver loaded");
 			Class.forName(driver);
 			con =DriverManager.getConnection(url,"root","satya");
+			System.out.println("Thread :-" +Thread.currentThread().getName());
 			System.out.println("------------Connection Establised");
 			return con;
 		} catch (ClassNotFoundException e) {

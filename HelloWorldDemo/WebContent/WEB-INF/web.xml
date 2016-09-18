@@ -21,4 +21,23 @@
     <servlet-name>Login</servlet-name>
     <url-pattern>/LoginControler</url-pattern>
   </servlet-mapping>
+   <!-- Login Servlet end -->
+    <!-- Test Servlet Start -->
+  <servlet>
+    <servlet-name>MainFirstServlet</servlet-name>
+    <servlet-class>com.satya.controler.MainFirstServlet</servlet-class>
+    <init-param>
+    <description>Application Name</description>
+    <param-name>app</param-name>
+    <param-value>DemoApp</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MainFirstServlet</servlet-name>
+    <url-pattern>/MainFirstServlet</url-pattern>
+  </servlet-mapping>
+  <context-param>
+  <param-name>mainapp</param-name>
+  <param-value>satyaMainApp</param-value>
+  </context-param>
 </web-app>
