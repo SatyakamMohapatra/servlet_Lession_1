@@ -12,13 +12,24 @@
   <filter-name>AuthFilter</filter-name>
   <url-pattern>/*</url-pattern>
   </filter-mapping>
+  
+ <!--  <filter>
+  <filter-name>AuthFilter</filter-name>
+  <filter-class>com.satya.filter.AuthFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  <filter-name>AuthFilter</filter-name>
+  <url-pattern>/LoginControler</url-pattern>
+  </filter-mapping> -->
+  
+  
   <servlet>
     <servlet-name>main</servlet-name>
     <servlet-class>com.satya.controler.MainControler</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>main</servlet-name>
-    <url-pattern>/hello</url-pattern>
+    <url-pattern>/MainControler</url-pattern>
   </servlet-mapping>
   <!-- Login Servlet -->
   <servlet>

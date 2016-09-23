@@ -18,11 +18,10 @@ public class MainControler extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String s = req.getParameter("name");
-		PrintWriter writer = resp.getWriter();
-		writer.println("Hello.."+s);
-		System.out.println(s+" "+writer);
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("[com.satya.controler.MainControler][MainControler][doGet] inside doGet...");
+		String s=request.getParameter("user");
+		System.out.println(s);
 		
 		
 	}

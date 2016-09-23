@@ -15,25 +15,31 @@ public class AuthFilter implements Filter {
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 		// TODO Auto-generated method stub
-		
+		System.out.println("[com.satya.filter.AuthFilter][AuthFilter][init] inside init...");
 	}
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/MainTest.jsp");
-		dispatcher.forward(request, response);
+		//System.out.println("[com.satya.filter.AuthFilter][AuthFilter][doFilter] inside checker 1...");
+		//RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/MainTest.jsp");
+		//dispatcher.include(request, response);
+	    String s=request.getParameter("user");
 		System.out.println("[com.satya.filter.AuthFilter][AuthFilter][doFilter] in filter...");
-		if (request.getParameter("user")=="satya") {
-			System.out.println("[com.satya.filter.AuthFilter][AuthFilter][doFilter] inside checker...");
-		}else{
+	    //chain.doFilter(request, response);
+		//if (s.equals("satya")) {
+			System.out.println("[com.satya.filter.AuthFilter][AuthFilter][doFilter] inside checker 2...");
+			chain.doFilter(request, response);
+			System.out.println("[com.satya.filter.AuthFilter][AuthFilter][doFilter] post filter...");
+		//}else{
 			System.out.println("[com.satya.filter.AuthFilter][AuthFilter][doFilter] password did not match...");
-		}
+	//	}
 	}
 
 	@Override
 	public void destroy() {
 		// TODO Auto-generated method stub
+		System.out.println("[com.satya.filter.AuthFilter][AuthFilter][destroy] inside destory...");
 		
 	}
 

@@ -8,7 +8,7 @@
 </head>
 <body>
 <p>My Test From</p>
-<form action="MainControler" method="post">
+<form action="MainControler" method="get">
 <table>
 <tr>
 <td>Name:</td><td><input type="text" name="user"></td>
