@@ -4,6 +4,14 @@
   <welcome-file-list>
     <welcome-file>hello.html</welcome-file>
   </welcome-file-list>
+  <filter>
+  <filter-name>AuthFilter</filter-name>
+  <filter-class>com.satya.filter.AuthFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  <filter-name>AuthFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+  </filter-mapping>
   <servlet>
     <servlet-name>main</servlet-name>
     <servlet-class>com.satya.controler.MainControler</servlet-class>
