@@ -13,5 +13,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/satyakam.m/Documents/STUDY/JAR/JAVAEE Monitoring tools/javamelody-1.49.0/javamelody.jar"/>
+	<classpathentry kind="lib" path="C:/Users/satyakam.m/Documents/STUDY/JAR/JAVAEE Monitoring tools/javamelody-1.49.0/jrobin-1.5.9.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
